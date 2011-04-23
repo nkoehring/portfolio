@@ -1,0 +1,42 @@
+/* line 1 */
+body {
+  font-family: Verdana;
+  font-size: 10pt;
+}
+
+/* line 6 */
+body > div, body > header, body > footer {
+  display: block;
+  margin: auto;
+  width: 960px;
+}
+
+/* line 12 */
+a, a:link, a:visited, a:active, img {
+  border: none;
+}
+
+/* line 15 */
+#social {
+  position: fixed;
+  left: 0;
+  top: 40%;
+  width: 32px;
+}
+/* line 20 */
+#social a {
+  display: block;
+  max-width: 32px;
+}
+
+/* line 24 */
+section.left, section.right {
+  display: inline-block;
+  width: 47%;
+  background: #eeeeee;
+}
+
+/* line 29 */
+section.left {
+  margin-right: 5%;
+}

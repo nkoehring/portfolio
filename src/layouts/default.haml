@@ -1,0 +1,54 @@
+!!! 5
+%html
+  %head
+    %meta( name="keywords" content="nkoehring, Norman Köhring, c, cplusplus, ruby, python, openframeworks, security, rails, Ruby on Rails, programming, testing, development, Leipzig, Germany" )
+    %meta( name="description" content="nkoehring" )
+    %meta( http-equiv="Content-type" content="text/html; charset=utf-8" )
+    %title nkoehring
+    %link( type="text/css" rel="stylesheet" media="screen" href="/stylesheets/screen.css" )
+    /[if lt IE 9]
+      %script( src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" )
+      %script( src="http://html5shim.googlecode.com/svn/trunk/html5.js" )
+
+  %body
+    #background
+
+    %header
+      -#%hgroup#social
+        %a( href="http://github.com/nkoehring" target="_blank" )
+          %img( src="/images/social/github.png" alt="github" width=32 )
+        %a( href="http://twitter.com/nkoehring" target="_blank" )
+          %img( src="/images/social/twitter.png" alt="twitter" width=32 )
+        %a( href="http://facebook.com/nkoehring" target="_blank" )
+          %img( src="/images/social/facebook.png" alt="facebook" width=32 )
+        %a( href="http://identi.ca/nkoehring" target="_blank" )
+          %img( src="/images/social/identica.png" alt="identi.ca" width=32 )
+        %a( href="mailto:gewerbe[at]nkoehring.de" )
+          %img( src="/images/social/contact.png" alt="contact" width=32 )
+
+      %nav
+        %a( href="/" class="#{(current_page == "/index.html" ? "current" : "" )}" )
+          home
+          .effect HOME
+        %a( href="/ueber-mich" class="#{(current_page == "/ueber-mich.html" ? "current" : "" )}" )
+          über mich
+          .effect ABOUT ME
+        %a( href="/web-entwicklung" class="#{(current_page == "/web-entwicklung.html" ? "current" : "" )}" )
+          Web
+          .effect WEB
+        %a( href="/software-entwicklung" class="#{(current_page == "/software-entwicklung.html" ? "current" : "" )}" )
+          Software
+          .effect SOFTWARE
+        %a( href="/referenzen" class="#{(current_page == "/referenzen.html" ? "current" : "" )}" )
+          Projekte
+          .effect REFERENCES
+        %a( href="/kontakt" class="#{(current_page == "/kontakt.html" ? "current" : "" )}" )
+          Kontakt
+          .effect Contact
+
+    #content
+      .wrapper=yield
+
+    %footer
+      Copyright © 2011 Norman Köhring
+      %span.right.nonintervening gewerbe[at]nkoehring.de

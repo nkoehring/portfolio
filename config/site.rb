@@ -1,8 +1,8 @@
 # Default is 3000
-# configuration.preview_server_port = 3000
+configuration.preview_server_port = 3001
  
 # Default is localhost
-# configuration.preview_server_host = "localhost"
+configuration.preview_server_host = "localhost"
  
 # Default is true
 # When false .html & index.html get stripped off generated urls
@@ -19,3 +19,7 @@ configuration.sass_options = {
 configuration.haml_options = {
   :format => :html5
 }
+
+# Default is an empty string
+# configuration.coffee_options = ''
+

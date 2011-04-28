@@ -1,4 +1,5 @@
 $background-colour: #DDD
+//$content-background-colour: rgba(0,74,140,0.6)
 $content-background-colour: #4886B3
 $foreground-colour: #EEE
 $menu-anchor-colour: #07C
@@ -77,7 +78,17 @@ h1
   height: 383px
   margin-left: -203px
   background: $background-colour $background-image center no-repeat
-  z-index: -1
+  z-index: -10
+ 
+//#background2
+  position: fixed
+  top: 0
+  left: inherit
+  width: 203px
+  height: 383px
+  background: $background-colour $content-background-image -250px 0 no-repeat
+  border-radius: 1em
+  z-index: -9
 
 nav, header, footer, #content
   display: block
@@ -137,12 +148,16 @@ footer
 #content
   margin: 70px 0
   padding: 1em 0
-  background: $content-background-colour $content-background-image -50% -75px no-repeat
+  //background: $content-background-colour
+  background: $content-background-colour $content-background-image -9px 0 no-repeat fixed
   border-radius: 1em
   box-shadow: 0 0 10px -2px black
+  min-height: 300px
+  overflow: hidden
   .wrapper
     margin: 1em 2em
     line-height: 1.5em
+    z-index: 10
 
 .right
   float: right

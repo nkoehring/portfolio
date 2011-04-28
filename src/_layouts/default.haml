@@ -29,9 +29,10 @@
       %nav
         =partial 'menu.haml'
 
-    #content
-      .wrapper
-        =yield
+    #content_wrapper
+      #content
+        .wrapper
+          =yield
 
     %footer
       Copyright © 2011 Norman Köhring

@@ -70,7 +70,7 @@ h1
   strong
     font-size: 1.2em
 
-#background
+//#background
   position: fixed
   top: 0
   left: inherit
@@ -144,16 +144,23 @@ footer
   text-shadow: 0 0 3px black
   color: $background-colour
 
+#content_wrapper
+  margin:
+    top: 1px
+    left: -195px
+  padding:
+    top: 1px
+    left: 195px
+  background: $background-colour $background-image top left no-repeat fixed
 
 #content
   margin: 70px 0
   padding: 1em 0
   //background: $content-background-colour
-  background: $content-background-colour $content-background-image -9px 0 no-repeat fixed
+  background: $content-background-colour $content-background-image 0 0 no-repeat fixed
   border-radius: 1em
   box-shadow: 0 0 10px -2px black
   min-height: 300px
-  overflow: hidden
   .wrapper
     margin: 1em 2em
     line-height: 1.5em

@@ -70,6 +70,9 @@ h1
   strong
     font-size: 1.2em
 
+h5
+  margin-bottom: 0
+
 ul, li
   list-style: none
   margin: 0
@@ -108,11 +111,26 @@ nav
     &:hover
       color: $menu-anchor-colour
       text-decoration: none
-      text-shadow: 0 0 2px black
+      //text-shadow: 0 0 2px black
+      .glow
+        box-shadow: 0 5px 5px yellow
 
     &.current
       background-color: gray
       background-color: rgba(255,255,255,.2)
+
+    .glow
+      margin: auto
+        top: -1.1em
+      width: 1em
+      border-radius: 1em
+      +transition(box-shadow, 0.5s)
+
+    .wall
+      margin: auto
+        top: -1.1em
+      background: -webkit-gradient(linear, left top, left bottom, from($background-colour), to(gray))
+      background: -moz-linear-gradient(top,  $background-colour,  gray)
 
     .effect 
       width: 100px
@@ -138,6 +156,7 @@ header
   background: -webkit-gradient(linear, left top, left bottom, from($background-colour), to(gray))
   background: -moz-linear-gradient(top,  $background-colour,  gray)
   opacity: .7
+  box-shadow: 0 2px 2px black
 
 footer
   bottom: 0
@@ -177,6 +196,9 @@ ul.projects
           position: top left
         opacity: 0.6
         +transition(opacity, 0.5s)
+        &.bordered
+          border: 5px solid white
+          border-radius: 1.25em
         nav
           opacity: 0
           +transition(opacity, 0.5s)
@@ -197,7 +219,7 @@ ul.projects
           right: 0.5em
         border-radius: 1em
         background: black
-        .prev, .next
+        div
           display: inline-block
           height: 30px
           line-height: 30px
@@ -213,6 +235,7 @@ ul.projects
       width: 250px
       height: 100%
       vertical-align: top
+      text-align: justify
       h2
         margin-top: 0
         .date

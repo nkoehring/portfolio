@@ -4,14 +4,15 @@ $ () ->
   for project in project_list
     targets = $('ul.images li', project)
     if targets.length > 1
+      targets.append('<nav><div>←</div><div>→</div></nav>')
       targets.hide()
       targets.first().show()
 
     targets.children('nav').hide() if targets.length == 1
     if targets.length > 1
       for target in targets
-        nav_previous = $('nav .prev', target)
-        nav_next = $('nav .next', target)
+        nav_previous = $('nav div', target).first()
+        nav_next = $('nav div', target).last()
 
         nav_previous.click (event) ->
           target = $(event.target)

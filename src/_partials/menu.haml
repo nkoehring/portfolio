@@ -1,6 +1,8 @@
 %a( href="/" class="#{(current_page == "/index.html" ? "current" : "" )}" )
   home
-  .effect HOME
+  -#.effect HOME
+  .glow &nbsp;
+  .wall &nbsp;
 %a( href="/ueber-mich" class="#{(current_page == "/ueber-mich.html" ? "current" : "" )}" )
   über mich
   .effect ABOUT ME
@@ -16,3 +18,4 @@
 %a( href="/kontakt" class="#{(current_page == "/kontakt.html" ? "current" : "" )}" )
   Kontakt
   .effect Contact
+
